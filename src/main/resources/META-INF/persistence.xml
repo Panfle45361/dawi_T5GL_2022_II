@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<!-- similar o equivalente al archivo de conexión -->
+	<!-- SE ESPECIFICA EL "NAME" y el "TRANSACTION-TYPE" como resource_local -->
+	<persistence-unit name="mySQL" transaction-type="RESOURCE_LOCAL">
+	
+		<!-- Se colocaran dentro, las clases a gestionar -->
+		<class>model.Usuario</class>
+		
+		<!-- y las propiedades o configuración de conexión -->
+		<properties>
+			<!-- MySQL -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" 
+			value="jdbc:mysql://localhost:3306/ciberfarmadawi?serverTimezone=UTC" />	<!-- NOMBRE DEL SERVIDOR -->
+			<property name="javax.persistence.jdbc.user" value="root" />				<!-- USUARIO MYSQL -->
+			<property name="javax.persistence.jdbc.password" value="vizcardo6" />			<!-- CONTRASEÑA MYSQL -->
+			
+			<!-- Manejador Hibernate ORM: Mapeador de objetos relacionales-->
+			<property name="hibernate.hbm2ddl.auto" value="create" /> <!-- Usamos las palabras claves del CRUD (Create, Update, etc)-->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
