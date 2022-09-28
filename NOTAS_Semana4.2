@@ -1,0 +1,66 @@
+***************************************************************************
+• Mostrar el historial de commits
+		git log
+
+***************************************************************************		
+• Renombrar archivos de control
+		git mv [nombre_archivo_original] [nombre_archivo nuevo]
+
+***************************************************************************
+• Eliminar
+		git rm nombre_archivo
+		
+***************************************************************************		
+• Modificando escenarios
+		-git reset --soft commitId		
+			.Lo único que hace es cambiar de commit al seleccionado y 
+			 mantenía los cambios hechos.
+		-git reset --hard commitId
+			.Cambia al commit seleccionado pero oculta los cambios hechos
+			 después del commit
+		-git reset --mixed commitId
+		
+		
+commit 7a3f861597624e2d3489ef089f46efbc9c3ffa2c (HEAD -> master)
+Author: PanfletoGod <victorvizcardom@outlook.com>
+Date:   Wed Sep 28 17:48:57 2022 -0500
+
+    Se agrega al proyecto un listado de productos usando tabla
+
+commit d302aee35f8e07598c3dd64ed1465ec6370e2d35
+Author: PanfletoGod <victorvizcardom@outlook.com>
+Date:   Wed Sep 21 18:41:53 2022 -0500
+
+    proyecto incluyendo CRUD de productos y login
+    
+***************************************************************************
+Para entender más o menos, los branch o tambien llamados ramas son lineas
+de tiempo en las cuales se encuentra un proyecto, y son los commits los 
+encargados de guardar cierto momento durante el transcurso de desarrollo,
+es como si tomara una foto, los cambios se quedan guardados en un punto.
+			git branch --> Ver las ramas
+
+Se puede crear una "rama" alternativa pero siempre a partir del último
+commit, realizando una copia de esta misma en la nueva rama creada.
+Esto a través de:
+			git branch [nombre_de_la_nueva_rama]
+			
+***************************************************************************
+•Para cambiar entre ramas, se usa:
+			git checkout [nombre_rama]
+			
+***************************************************************************
+NO OLVIDAR: SIEMPRE QUE BORRES ALGO O MUEVAS ALGO, SIEMPRE AÑADIR LOS 
+ARCHIVOS PARA QUE SE ACTUALICE LA LISTA
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
